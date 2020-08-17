@@ -1,0 +1,23 @@
+.post-container {
+  display: flex;
+  justify-content: space-around;
+  max-height: 150px;
+  .img-wrapper {
+    max-width: 150px;
+    margin-right: 20px;
+    overflow: hidden;
+    img {
+      max-height: 100%;
+      width: auto;
+    }
+  }
+  .content-wrapper {
+    max-width: 60%;
+    h2 {
+      cursor: pointer;
+    }
+  }
+}
+.divider {
+  margin: 20px 0px 20px 0px;
+}

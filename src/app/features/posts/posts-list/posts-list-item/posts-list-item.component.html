@@ -1,0 +1,12 @@
+<ng-container *ngIf="postItem">
+  <div class="post-container">
+    <div class="img-wrapper">
+      <img src="{{postItem.featured_image}}">
+    </div>
+    <div class="content-wrapper">
+      <h2><a (click)="goToPost()" [innerHTML]="postItem.title"></a></h2>
+      <p [innerHTML]="truncatedContent"></p>
+    </div>
+  </div>
+  <mat-divider class="divider"></mat-divider>
+</ng-container>

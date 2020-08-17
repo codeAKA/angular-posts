@@ -1,0 +1,16 @@
+<ng-container *ngIf="post">
+  <img src="{{post.featured_image}}">
+  <h2 class="header" [innerHTML]="post.title"></h2>
+  <p [innerHTML]="post.content"></p>
+  <div class="author-name">
+    <span>Author: </span><strong [innerHTML]="post.author.name"></strong>
+  </div>
+  <mat-divider class="divider"></mat-divider>
+  <ng-container *ngIf="comments">
+    <h3 class="comments">Comments</h3>
+    <div *ngFor="let comment of comments; trackBy: trackById">
+      <strong [innerHTML]="comment.author.name"></strong>
+      <p [innerHTML]="comment.content"></p>
+    </div>
+  </ng-container>
+</ng-container>

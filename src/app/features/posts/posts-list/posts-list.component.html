@@ -1,0 +1,5 @@
+<h1 class="header">Posts</h1>
+<!-- <app-posts-list-item *ngFor="let post of postsList$ | async; trackBy: trackById" [postItem]="post" (emittedPostItem)="postItem($event)"></app-posts-list-item> -->
+<ng-container *ngIf="postsList.length > 0">
+  <app-posts-list-item *ngFor="let post of postsList; trackBy: trackById" [postItem]="post" (emittedPostItem)="postItem($event)"></app-posts-list-item>
+</ng-container>
