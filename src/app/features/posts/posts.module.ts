@@ -5,6 +5,9 @@ import { PostsListComponent } from './posts-list/posts-list.component';
 import { PostsListItemComponent } from './posts-list/posts-list-item/posts-list-item.component';
 import { MatDividerModule } from '@angular/material/divider';
 import { PostComponent } from './post/post.component';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { MatButtonModule } from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon';
 
 
 
@@ -17,8 +20,11 @@ import { PostComponent } from './post/post.component';
   imports: [
     CommonModule,
     PostsRoutingModule,
+    NgxPaginationModule,
     // material
-    MatDividerModule
+    MatDividerModule,
+    MatButtonModule,
+    MatIconModule
   ],
   exports: [
     PostsListComponent,

@@ -1,5 +1,11 @@
 <h1 class="header">Posts</h1>
 <!-- <app-posts-list-item *ngFor="let post of postsList$ | async; trackBy: trackById" [postItem]="post" (emittedPostItem)="postItem($event)"></app-posts-list-item> -->
 <ng-container *ngIf="postsList.length > 0">
-  <app-posts-list-item *ngFor="let post of postsList; trackBy: trackById" [postItem]="post" (emittedPostItem)="postItem($event)"></app-posts-list-item>
+  <app-posts-list-item *ngFor="let post of postsList | paginate: { id: 'listing_pagination',
+  itemsPerPage: 10,
+  currentPage: page,
+  totalItems: totalRecords }" [postItem]="post" (emittedPostItem)="postItem($event)"></app-posts-list-item>
+  <div>
+		<pagination-controls  id="listing_pagination" maxSize="5" directionLinks="true" (pageChange)="page = $event"></pagination-controls>
+	</div>
 </ng-container>

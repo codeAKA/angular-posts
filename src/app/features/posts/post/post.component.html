@@ -1,5 +1,10 @@
 <ng-container *ngIf="post">
-  <img src="{{post.featured_image}}">
+  <button mat-icon-button color="primary" aria-label="Example icon button with a home icon" routerLink="/">
+    <mat-icon>home</mat-icon>
+  </button>
+  <div class="img-wrapper">
+    <img src="{{post.featured_image}}">
+  </div>
   <h2 class="header" [innerHTML]="post.title"></h2>
   <p [innerHTML]="post.content"></p>
   <div class="author-name">
